@@ -8,7 +8,7 @@ function Card({ openDialog }: Record<string, any>) {
     }
 
     return (
-        <div className="advent-card border border-solid m-5" onClick={handleClick}>I'm a card</div>
+        <div className="advent-card border border-solid m-5" onClick={handleClick}>A card</div>
     )
 }
 
