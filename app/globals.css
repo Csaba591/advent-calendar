@@ -1,47 +1,47 @@
-/* @tailwind base; */
-/* @tailwind components; */
+@tailwind base;
+@tailwind components;
 @tailwind utilities;
+@tailwind forms;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+    --foreground-rgb: 0, 0, 0;
+    --background-rgb: 255, 255, 255;
 }
 
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-} */
+html,
+body {
+    height: 100%;
+}
+
+html {
+    padding-right: 0px !important;
+}
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    color: rgb(var(--foreground-rgb));
+    background: var(--background-rgb);
+    font-size: 18px;
 }
 
-
 .advent-card {
-  height: 250px;
-  width: 200px;
-  border: 2px solid darkgray;
-  background-color: firebrick;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    height: 300px;
+    width: 250px;
+    border: 2px solid darkgray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .modal {
-  min-height: 400px;
-  min-width: 400px;
+    min-height: 400px;
+    min-width: 400px;
+    @apply p-10;
 }
 
 .modal h1 {
-  text-align: center;
+    @apply text-center;
+}
+
+dialog::backdrop {
+    backdrop-filter: blur(4px);
 }
