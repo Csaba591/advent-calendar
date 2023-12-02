@@ -39,7 +39,7 @@ export default function GiftModal({
             setGift(null);
             modalElement.close();
         }
-    }, [isModalOpen]);
+    }, [isModalOpen, onClose]);
 
     function handleOK() {
         setModalOpen(false);

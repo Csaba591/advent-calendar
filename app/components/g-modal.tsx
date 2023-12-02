@@ -5,13 +5,7 @@ import { GiftWithDay } from '../api/gift/route.js';
 
 export type GiftModalContext = { isOpen: boolean; gift?: GiftWithDay };
 
-export default function GModal({
-    context,
-    onClose,
-}: {
-    context: GiftModalContext;
-    onClose: () => void;
-}) {
+export default function GModal({ context }: { context: GiftModalContext }) {
     const [open, setOpen] = useState(true);
 
     useEffect(() => {

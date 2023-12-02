@@ -1,0 +1,36 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+datasource db {
+  provider     = "mysql"
+  url          = env("DATABASE_URL")
+  relationMode = "prisma"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Gift {
+  id      String         @id @default(cuid())
+  name    String
+  content String
+  winners GiftOfPerson[]
+}
+
+model Person {
+  id       String         @id @default(cuid())
+  name     String
+  email    String         @unique
+  giftsWon GiftOfPerson[]
+}
+
+model GiftOfPerson {
+  gift     Gift   @relation(fields: [giftId], references: [id])
+  giftId   String
+  person   Person @relation(fields: [personId], references: [id])
+  personId String
+  day      Int
+
+  @@id([giftId, personId, day])
+}
