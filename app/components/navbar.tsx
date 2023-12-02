@@ -9,7 +9,7 @@ export default function Navbar() {
                 <div className="col-span-1 md:col-span-2 mx-6 flex flex-row justify-center md:justify-end items-center gap-3">
                     <a
                         className="text-blue-600 visited:text-purple-600"
-                        href="decotrend.hu"
+                        href="https://decotrend.hu"
                         target="_blank"
                     >
                         Webáruház

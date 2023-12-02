@@ -60,6 +60,8 @@ export default function AdventPage() {
         />
     )) as JSX.Element[];
 
+    return <div>Jelenleg nem működik</div>;
+
     return (
         <>
             <Navbar />
